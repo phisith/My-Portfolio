@@ -1,18 +1,50 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Card from "../components/Card.astro";
 import Hero from "../components/Hero.astro";
+import Link from "../components/Link.astro";
 ---
 
 <Layout title="PL">
   <Hero slot="hero" />
-  <!-- <main>
-		<h1>Welcome to <span class="text-gradient">Astro</span></h1>
-		<p class="instructions">
-			To get started, open the directory <code>src/pages</code> in your project.<br />
-			<strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
-		</p>
-	</main> -->
-</Layout>
+  <section id="about" class="justify-center flex px-4 py-6">
+    <article class="w-full max-w-[75ch]">
+      <h2>About Me</h2>
+      <p>
+        Yo, I'm Phisith Lengsavath or you can call me Beckham, I've graduated
+        with bachelor's degree in Computer science from
+        <Link href="https://www.psb-academy.edu.sg/coventry-university">
+          Coventry University - PSB Academy Singapore</Link
+        >. Since 2020, I've have been working as "Androind developer" for a
+        small company in Laos. After a year I has decided to switch my job to
+        Thailand and working as the "Full stack web application" and I really
+        enjoy with it.
 
-<style></style>
+        <br />
+        <br />
+      </p>
+      <p>
+        I have decide to create this portfolio website for update and keep
+        tracking of my <Link href="#project">project</Link> during a journey as the
+        Web Developer.
+      </p>
+    </article>
+  </section>
+  <section id="skill" class="justify-center flex px-4 py-6">
+    <article class="w-full max-w-[75ch]">
+      <h2>Skill</h2>
+    </article>
+  </section>
+  <section id="project" class="justify-center flex px-4 py-6">
+    <article class="w-full max-w-[75ch]">
+      <h2>Projects</h2>
+    </article>
+  </section>
+  <section id="contact" class="justify-center flex px-4 py-6">
+    <article class="w-full max-w-[75ch]">
+      <h2>Contact</h2>
+    </article>
+  </section>
+</Layout>
+<script>
+  import "../script/activeNav";
+</script>

@@ -1,0 +1,21 @@
+---
+import { Icon } from "astro-icon";
+
+let { href, class: className, link } = Astro.props;
+link = link ?? /^(http|mailto)/.test(href);
+---
+
+<a
+  {href}
+  class={`${className} underline underline-offset-4 inline-block hover:decoration-wavy`}
+>
+  <slot />
+  {
+    link && (
+      <Icon
+        name="fluent:arrow-up-right-24-filled"
+        class="inline-block h-[1em] w-[1em]"
+      />
+    )
+  }
+</a>
