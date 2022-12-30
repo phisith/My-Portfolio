@@ -1,0 +1,11 @@
+---
+import { Icon } from "astro-icon";
+let { color, icon, iconClass, name } = Astro.props;
+---
+
+<div class={`${color} flex items-center px-4 py-2 rounded-xl gap-2`}>
+  <div class="bg-white rounded-full p-2">
+    <Icon name={icon} class={`block h-[1em] w-[1em] ${iconClass}`} />
+  </div>
+  {name}
+</div>

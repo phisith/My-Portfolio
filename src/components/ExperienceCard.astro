@@ -1,0 +1,23 @@
+---
+let { company, position, time, detail } = Astro.props;
+---
+
+<div class="w-full">
+  <h4 class="mb-0">{company}</h4>
+  <div class="flex justify-between items-center">
+    <p class="mt-0 underline underline-offset-4">{position}</p>
+    <p class="mt-0">{time}</p>
+  </div>
+  <div class="px-4">
+    {
+      detail.map((data: { project: string; responsibility: string }) => {
+        return (
+          <li>
+            <span class="font-bold">{data?.project}</span>:{" "}
+            {data?.responsibility}
+          </li>
+        );
+      })
+    }
+  </div>
+</div>

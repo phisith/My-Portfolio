@@ -2,6 +2,9 @@
 import Layout from "../layouts/Layout.astro";
 import Hero from "../components/Hero.astro";
 import Link from "../components/Link.astro";
+import SkillBadge from "../components/SkillBadge.astro";
+import ExperienceCard from "../components/ExperienceCard.astro";
+import ContactLink from "../components/ContactLink.astro";
 ---
 
 <Layout title="PL">
@@ -13,34 +16,212 @@ import Link from "../components/Link.astro";
         Yo, I'm Phisith Lengsavath or you can call me Beckham, I've graduated
         with bachelor's degree in Computer science from
         <Link href="https://www.psb-academy.edu.sg/coventry-university">
-          Coventry University - PSB Academy Singapore</Link
-        >. Since 2020, I've have been working as "Androind developer" for a
-        small company in Laos. After a year (2021) I has decided to switch my
-        job to Thailand and working as the "Full stack web application" and I
-        really enjoy with it.
+          Coventry University - PSB Academy Singapore .</Link
+        > Since 2020, I've been working as "Android developer" for a small company
+        in Laos. After a year (2021) I've decided to switch my job and relocated
+        to Thailand and work as the "Full-Stack web application".
       </p>
-      <br />
-      <br />
+
       <p>
-        I have decide to create this portfolio website for update and keep
-        tracking of my <Link href="#project">project</Link> during a journey as the
-        Web Developer.
+        So I decided to create this portfolio website to update and keep track
+        of my <Link href="#project">projects</Link> during my journey as a Web Developer.
       </p>
     </article>
   </section>
   <section id="skill" class="justify-center flex px-4 py-6">
     <article class="w-full max-w-[75ch]">
       <h2>Skill</h2>
+      <div>
+        <h4>Frontend</h4>
+        <div class="grid gap-4 grid-cols-2 sm:grid-cols-3 md:grid-cols-4">
+          <SkillBadge
+            color={"bg-sky-400 text-white"}
+            icon={"logos:react"}
+            name={"React"}
+          />
+          <SkillBadge
+            color={"bg-orange-600 text-white"}
+            icon={"vscode-icons:file-type-astro"}
+            name={"Astro"}
+          />
+          <SkillBadge
+            color={"bg-purple-900 text-white"}
+            icon={"logos:bootstrap"}
+            name={"Bootstrap"}
+          />
+          <SkillBadge
+            color={"bg-pink-600 text-white"}
+            icon={"logos:sass"}
+            name={"Sass"}
+          />
+          <SkillBadge
+            color={"bg-sky-400 text-white"}
+            icon={"logos:tailwindcss-icon"}
+            name={"Tailwind"}
+          />
+        </div>
+      </div>
+      <div>
+        <h4>Backend</h4>
+        <div class="grid gap-4 grid-cols-2 sm:grid-cols-3 md:grid-cols-4">
+          <SkillBadge
+            color={"bg-emerald-900 text-white"}
+            icon={"logos:django"}
+            name={"Django"}
+          />
+          <SkillBadge
+            color={"bg-lime-700 text-white"}
+            icon={"simple-icons:celery"}
+            iconClass={"text-lime-700"}
+            name={"Celery"}
+          />
+          <SkillBadge
+            color={"bg-orange-600 text-white"}
+            icon={"logos:rabbitmq"}
+            name={"RabbitMQ"}
+          />
+          <SkillBadge
+            color={"bg-red-900 text-white"}
+            icon={"logos:redis"}
+            name={"Redis"}
+          />
+        </div>
+      </div>
+      <div>
+        <h4>Database</h4>
+        <div class="grid gap-4 grid-cols-2 sm:grid-cols-3 md:grid-cols-4">
+          <SkillBadge
+            color={"bg-sky-700 text-white"}
+            icon={"logos:mysql"}
+            name={"MySQL"}
+          />
+          <SkillBadge
+            color={"bg-sky-700 text-white"}
+            icon={"logos:postgresql"}
+            name={"PostgreSQL"}
+          />
+        </div>
+      </div>
+      <div>
+        <h4>Other</h4>
+        <div class="grid gap-4 grid-cols-2 sm:grid-cols-3 md:grid-cols-4">
+          <SkillBadge
+            color={"bg-sky-700 text-white"}
+            icon={"logos:docker-icon"}
+            name={"Docker"}
+          />
+          <SkillBadge
+            color={"bg-green-800 text-white"}
+            icon={"logos:nginx"}
+            name={"Nginx"}
+          />
+        </div>
+      </div>
+      <div>
+        <h4>Tools</h4>
+        <div class="grid gap-4 grid-cols-2 sm:grid-cols-3 md:grid-cols-4">
+          <SkillBadge
+            color={"bg-sky-600 text-white"}
+            icon={"vscode-icons:file-type-vscode"}
+            name={"Vscode"}
+          />
+          <SkillBadge
+            color={"bg-gradient-to-r from-green-700 to-yellow-300 text-white"}
+            icon={"logos:pycharm"}
+            name={"Pycharm"}
+          />
+          <SkillBadge
+            color={"bg-cyan-600 text-white"}
+            icon={"logos:trello"}
+            name={"Trello"}
+          />
+          <SkillBadge
+            color={"bg-black border-white border text-white"}
+            icon={"mdi:fountain-pen-tip"}
+            iconClass={"text-black"}
+            name={"excalidraw"}
+          />
+        </div>
+      </div>
     </article>
   </section>
-  <section id="project" class="justify-center flex px-4 py-6">
+  <section id="experience" class="justify-center flex px-4 py-6">
+    <article class="w-full max-w-[75ch]">
+      <h2>Experience</h2>
+      <div class="flex flex-col">
+        <ExperienceCard
+          position={"Android Developer (Java)"}
+          company={"APIS Company"}
+          time={"Aug 2020 - May 2021"}
+          detail={[
+            {
+              project: "Mislao",
+              responsibility:
+                "Implement functions based on system requirements and users feedback, Support users, and Collaborate with the Customer service team to build the user tutorial.",
+            },
+          ]}
+        />
+        <ExperienceCard
+          position={"Full-Stack Developer"}
+          company={"Strong Solutions Co., Ltd."}
+          time={"May 2021 - Present"}
+          detail={[
+            {
+              project: "Stronghold",
+              responsibility:
+                "Implement new features based on current company operations, Optimize server performance for handling 50 users to 200 users.",
+            },
+            {
+              project: "Stronghold V2",
+              responsibility:
+                "Create a new ERP system for overall performance boot like decreasing time-consuming when exporting data 230,000 records from 1hour++ to around 3 seconds, and Better UI/UX based on users feedback, by using: (React js, Tailwind, Django, Celery, Redis, PostgreSQL, and Docker)",
+            },
+          ]}
+        />
+      </div>
+    </article>
+  </section>
+  <section id="projects" class="justify-center flex px-4 py-6">
     <article class="w-full max-w-[75ch]">
       <h2>Projects</h2>
+      <div class="grid grid-cols-3 gap-4">Coming soon...</div>
     </article>
   </section>
   <section id="contact" class="justify-center flex px-4 py-6">
     <article class="w-full max-w-[75ch]">
       <h2>Contact</h2>
+      <div class="grid gap-4 grid-cols-2 sm:grid-cols-3 md:grid-cols-4">
+        <ContactLink
+          href="https://www.facebook.com/beckhamps"
+          icon={"ic:baseline-facebook"}>Facebook</ContactLink
+        >
+        <ContactLink
+          href="https://www.instagram.com/b.beckham.h/"
+          icon={"uil:instagram-alt"}>Instagram</ContactLink
+        >
+        <ContactLink
+          href="https://www.upwork.com/workwith/phisithl"
+          icon={"simple-icons:upwork"}>Upwork</ContactLink
+        >
+        <ContactLink href="https://github.com/phisith" icon={"mdi:github"}
+          >Github</ContactLink
+        >
+      </div>
+      <div class="flex justify-center items-center">
+        <p class="text-center">
+          Or contact me by email : <span
+            class="underline underline-offset-8 hover:decoration-wavy"
+            >phisith.lengsavath@hotmail.com</span
+          >
+        </p>
+      </div>
+    </article>
+  </section>
+  <section class="justify-center flex px-4 py-6">
+    <article class="w-full max-w-[75ch] justify-center flex">
+      <p class="text-xs underline underline-offset-4">
+        This is create by using AstroJs - Tailwind - Vercel
+      </p>
     </article>
   </section>
 </Layout>
