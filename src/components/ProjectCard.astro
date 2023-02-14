@@ -1,0 +1,34 @@
+---
+let { name, stack, info, image, link } = Astro.props;
+---
+
+<a href={link} class="relative group overflow-hidden rounded-xl bg-gray-700">
+  <div class="h-72 flex justify-center items-center group-hover:opacity-5">
+    {
+      image ? (
+        <img class="object-cover w-full h-full" src={image} />
+      ) : (
+        <h3 class="text-white/50 m-0">Private</h3>
+      )
+    }
+  </div>
+  <div
+    class="absolute bg-gradient-to-t from-black via-black w-full h-full transform duration-500 inset-y-48 group-hover:inset-y-5 group-hover:via-transparent"
+  >
+    <div class="absolute w-full flex place-content-start ml-4">
+      <p
+        class="capitalize font-bold text-3xl shadow-2xl text-white group-hover:underline underline-offset-8 group-hover:decoration-wavy"
+      >
+        {name}
+      </p>
+    </div>
+    <div class="absolute flex flex-col place-centent-start mt-20 mx-4">
+      <p class="text-white text-base font-semibold mb-0">
+        Stack: <span class="break-words">{stack}</span>
+      </p>
+      <p class="text-white text-sm mt-2">
+        Info: <span class="break-words">{info}</span>
+      </p>
+    </div>
+  </div>
+</a>

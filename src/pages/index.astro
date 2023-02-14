@@ -5,6 +5,7 @@ import Link from "../components/Link.astro";
 import SkillBadge from "../components/SkillBadge.astro";
 import ExperienceCard from "../components/ExperienceCard.astro";
 import ContactLink from "../components/ContactLink.astro";
+import ProjectCard from "../components/ProjectCard.astro";
 ---
 
 <Layout title="PL">
@@ -209,7 +210,34 @@ import ContactLink from "../components/ContactLink.astro";
   <section id="projects" class="justify-center flex px-4 py-6">
     <article class="w-full max-w-[75ch]">
       <h2>Projects</h2>
-      <div class="grid grid-cols-3 gap-4">Coming soon...</div>
+      <h4>Private (Company)</h4>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+        <ProjectCard
+          name={"Mislao"}
+          stack={"Android (Java), MySQL"}
+          info={"Collecting household information"}
+        />
+        <ProjectCard
+          name={"Stronghold"}
+          stack={"React, Redux, Bootstrap, SCSS, Django, Celery, RabbitMQ, PostgreSQL, Docker"}
+          info={"ERP system"}
+        />
+        <ProjectCard
+          name={"StrongholdV2"}
+          stack={"React, Redux Toolkit, Tailwind, Django, Celery, Redis, PostgreSQL, Docker"}
+          info={"ERP system (overall performance improve from the pervious version)"}
+        />
+      </div>
+      <h4>Public</h4>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+        <ProjectCard
+          image={"/assets/bin2dec.png"}
+          name={"Bin2Dec"}
+          stack={"React, Tailwind, Vercel"}
+          info={"Binary to Decimal Convertor"}
+          link={"https://bin2-dec-blue.vercel.app/"}
+        />
+      </div>
     </article>
   </section>
   <section id="contact" class="justify-center flex px-4 py-6">
